@@ -1,0 +1,336 @@
+    <!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Custom Styling -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="dist/cs/datepicker.css">
+
+
+        <title>Belal Klinil AB</title>
+    </head>
+    <body>
+        <div class="main-div" id="print-all">
+            <section class="top-section">
+                <div class="row mx-0">
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <img src="dist/img/d.jpeg" id="imgj" style="margin-top:-50px;height:150px;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8">
+                        <div class="form-group select-dropdown" style="margin-left:13%;">
+                            <label for="exampleFormControlSelect1" class="mb-0" id="hide"><b>Invoice Type</b></label>
+                            <select class="form-control form-control-sm" id="faktura" name="invoice_type">
+                                <option selected >FAKTURA</option>
+                                <option>Paminnelse Uppsaggning</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="second-section">
+                <div class="row mx-0">
+                    <div class="offset-xl-6 offset-lg-6 offset-md-6 col-xl-6 col-lg-6 col-md-6">
+                            <div class="form-section" id="top_layer">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="mb-0">kund nr.</label>
+                                    <input type="email" class="form-control form-control2 form-control-sm" id="b" placeholder="Enter Kund nr">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="mb-0">Datum.</label>
+                                    <input data-toggle="datepicker" class="form-control form-control2 form-control-sm">
+                                    <!-- <textarea data-toggle="datepicker"></textarea> -->
+                                    <div data-toggle="datepicker"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="mb-0">Fakura nr.</label>
+                                    <input type="email" id="a" class="form-control form-control2 form-control-sm">
+                                </div>
+                            </div>
+                            <div class="second-form-section">
+                                <div class="form-group row mb-0">
+                                    <label for="exampleFormControlInput1" class="col-xl-1 mb-0"><b>Till:</b></label>
+                                    <div class="col-xl-10">
+                                        <input type="text" style="line-height: 0" class="form-control form-control-sm form-control1" id="n" placeholder="Enter Client Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-0">
+                                    <label for="exampleFormControlInput1" class="col-xl-1 mb-0"></label>
+                                    <div class="col-xl-10">
+                                        <input type="text" style="line-height: 0" class="form-control form-control-sm form-control1" id="m" placeholder="Enter Client Address">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-0">
+                                    <label for="exampleFormControlInput1" class="col-xl-1 mb-0"></label>
+                                    <div class="col-xl-10">
+                                        <input type="text"  class="form-control form-control-sm form-control1" style="width:100px;display: inline-block" id="o" placeholder="Enter Post No">
+                                        <input type="text" class="form-control form-control-sm form-control1" style="width:250px;display: inline-block" id="p" placeholder="Enter City">
+                                        
+                                    </div>
+                                    <!-- <div class="col-xl-5 col-lg-5 col-md-5"> -->
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            
+                    </div>
+                </div>
+            </section>
+
+            <section class="third-section">
+                <div class="row mx-0">
+                    <div class="col-xl-12">
+                        <div class="form-group fle">
+                            <div class="f">
+                                <label for="" class="mb-0"><b>ERT Org. / PERSNr.</b></label>
+                            </div>
+                            <div class="d">
+                                <input type="email" id="non" class="form-control form-control-sm form-control2" id="" placeholder="Enter Personummer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tgble">
+                    <div class="col-xl-12">
+                        <table class="table table-responsive-sm tble table-sm" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th style="width:50px">Nr</th>
+                                    <th style="width:50px">Fakturan avser</th>
+                                    <th style="width:50px">Antal</th>
+                                    <th style="width:50px">Å-pris</th>
+                                    <th class="lopo" style="width:50px">Belopp</th>   
+                                    <th class="display" style="width:20px"></th>                         
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <tr>
+                                    <td style="width:50px"><input  type="text" class="llo form-control2 form-control form-control-sm"  ></td>
+                                    <td><textarea name="" class="form-control form-control2 form-control-sm tedtarea" col="5" id="" rows="5" ></textarea></td>
+                                    <td style="width:50px"><input type="text" class="value form-control2 form-control form-control-sm"></td>
+                                    <td style="width:50px"><input type="text" class="quantity change form-control2 form-control form-control-sm"></td>
+                                    <td class="lopo"><h6 class="total alignl" id="total"></h6></td>
+                                    <td class="display">
+                                        <a href="#" class="add-row plus-btn btn-success btn btn-sm"><i class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="fourth-box">
+                            <div class="f">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput2" class="mb-0"><b>Förfallodatum</b></label>
+                                    <input data-toggle="datepicker" id="j" class="form-control form-control2 form-control-sm">
+                                    <!-- <textarea data-toggle="datepicker"></textarea> -->
+                                    <div data-toggle="datepicker"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="l">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="mb-0"><b>Moms</b></label>
+                                    <input type="email" class="form-control form-control-sm form-control2" style="background-color: transparent" readonly id="aftertdis" placeholder="">
+                                </div>
+                            </div>
+                            
+                            <div class="d">
+                                <div class="form-group select-dropdown">
+                                    <label for="" class="mb-0"><b>Moms%</b></label>
+                                    <select id="discount" class="form-control form-control-sm form-control2" name="">
+                                        <option value="">Select</option>
+                                        <option value="0">0%</option>
+                                        <option value="12">12%</option>
+                                        <option value="25">25%</option>
+                                    </select>
+                                </div>
+                            </div>
+                        
+                            <div class="l">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="mb-0"><b>Underlag</b></label>
+                                    <input type="email" class="form-control form-control-sm form-control2" style="background-color: transparent" readonly id="fff" placeholder="">
+                                </div>
+                            </div>
+                            <div class="l">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="mb-0"><b>NettoBelopp</b></label>
+                                    <input type="email" class="form-control form-control-sm form-control2" style="background-color: transparent" readonly id="t" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="p-2 mb-0"><b>Vid förallen faktura skickas ärendet till Inkasso.  Dröjsmålsränta debiteras  </b></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="fifth-f">
+                            <div class="d">
+                                <h5 class="mb-0" style="font-weight: bolder"><b style="font-size: 26px">Belal Klinik AB</b></h5>
+                                <p style="font-size: 22px">Skaggetorp centrum 3A <br>58644 Linkoping</p>
+                            </div>
+                            <div class="d">
+                                <h5 class="mb-0" style="font-size: 22px">Org Nummer</h5>
+                                <p class="mb-0" style="font-size: 22px">559068-0228</p>
+                                <p style="font-size: 22px">Telefone 013156969</p>
+                            </div>
+                            <div class="d text-center">
+                                <h5 class="mb-0" style="font-size: 22px">Bankgiro</h5>
+                                <p class="mb-0" style="font-size: 22px">180-1075</p>
+                                <p class="text-center" style="font-size: 18px">IBAN SE6580000815059642641139</p>
+                            </div>
+                            <div class="d text-center">
+                                <h5 class="mb-2"></h5>
+                                <p class="mb-0" style="font-size: 22px">www.belaltandvard.se</p>
+                                <p class="mb-0" style="font-size: 22px">kontact@belaltandvard.se</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </section>
+
+            <section class="fourth-section mt-5">
+                <img src="dist/img/bankgirot-logo.png" style="height: 30px;" alt="">
+                <p class="another">INBETALNING/GIRERING  AVI</p>
+                <hr style="background-color: black;height: 2px;" class="mt-0">
+                <div class="flez">
+                    <div class="left">
+                        <p class="mb-1">Med Denna avi kan du betala på alla bankkontor eller via</p>
+                        <p class="mb-0" style="line-height: 0.7">*Bankgiro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Personkonto</p>
+                        <p class="mb-0">*Privatgiro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Balanskonto</p>
+                        <p class="mb-1" style="line-height: 0.7">*Sparbanksgiro</p>
+                        <p class="mb-0">Anvander du Bankgirots Leverantorsbtalningsrutin (LB)</p>
+                        <p class="mb-0">Ange nedanstående refernsr.</p>
+                        <p class="mb-0">Betainingsavsändae</p>
+
+                        <div class="auto">
+                            <h6 id="name" class="mb-1">Name</h6>
+                            <h6 id="address" class="mb-1">Address</h6>
+                            <div class="add" class="mb-1">
+                                <div class="l" class="mb-1">
+                                    <h6 id="port">Port</h6>
+                                </div>
+                                <div class="l">
+                                    <h6 id="city">City</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="font-size: 18px;font-weight: 500">Fran bankgirirnr (vid girering)</p>
+                    </div>
+                    <div class="right">
+                        <div class="box">
+                            <div class="l">Inbet avgift (fylis av banken)</div>
+                            <div class="r">OCR</div>
+                        </div>
+
+                        <div class="hub">
+                            <h6 >Fakturanummer/OCR: <span id="fk"></span></h6>
+                            <h6 >Kundnummer: <span id="lk"></span></h6>
+                            <h6>Förfallodatum: <span id="mk"></span></h6>
+                        </div>
+
+                        <div class="lowest-box">
+                            <div class="l">
+                                <h6>Till Bankgironr</h6>
+                                <h6>180-1075</h6>
+                            </div>
+                            <div class="l">
+                                <h6>Betalningssmottagare</h6>
+                                <h6>Belal Klinik AB</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="last">
+                <div class="row mx-0">
+                    <div class="col-xl-12 px-0">
+                        <div class="footer">
+                            <div class="l">
+                                <h6>VAR GOD INGA ÄNDRINGAR</h6>
+                            </div>
+                            <div class="l">
+                                <h6>MEDDELANDEN KAN LÄMNAS PÅ AVIN</h6>
+                            </div>
+                            <div class="l">
+                                <h6 class="text-right">DEN AVLÄSES MASKINELLT</h6>
+                            </div>
+                        </div>
+                        <div class="s-footer">
+                            <div class="l">
+                                <h6>- Referensnr</h6>
+                            </div>
+                            <div class="lk">
+                                <h6>Kronor</h6>
+                            </div>
+                            <div class="lks">
+                                <h6>Öre</h6>
+                            </div>
+                            <div class="lksa">
+                                <h6></h6>
+                            </div>
+                        </div>
+                        <div class="m-footer">
+                            <div class="l">
+                                <span>#</span><h6 id="sk"></h6>
+                            </div>
+                            <div class="lk">
+                                <span>#</span><h6 id="ee"></h6>
+                            </div>
+                            <div class="lks">
+                                <span>7 ></span>
+                                <h6>180-1075#41#</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer">
+                <div class="row">
+                    <div class="col-xl-12 text-center">
+                        <hr>
+                        <a href="#" id="download-pdf" class="btn btn-success">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+        <script src="dist/js/html2pdf.bundle.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+        <script src="dist/js/datepicker.js"></script>
+
+        <script src="dist/js/main.js"></script>
+    </body>
+</html>
